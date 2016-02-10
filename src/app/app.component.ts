@@ -79,7 +79,6 @@ export class AppComponent {
   };
   public heroes: Hero[];
   public selectedHero: Hero;
-
   constructor(private _heroService: HeroService) { }
 
   getHeroes() {

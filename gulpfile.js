@@ -55,6 +55,7 @@ gulp.watch('src/**/*.css', ['copy:assets']);
 
 
 
+
 gulp.task('build', ['compile', 'copy:libs', 'copy:assets']);
 gulp.task('serve', ['compile', 'copy:libs', 'copy:assets', 'live-serve']);
 gulp.task('default', ['build']);

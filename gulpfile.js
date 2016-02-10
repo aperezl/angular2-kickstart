@@ -27,7 +27,8 @@ gulp.task('copy:libs', function() {
       "node_modules/rxjs/bundles/Rx.js",
       "node_modules/angular2/bundles/angular2.dev.js",
       "node_modules/material-design-lite/material.min.css",
-      "node_modules/material-design-lite/material.min.js"
+      "node_modules/material-design-lite/material.min.js",
+      "node_modules/angular2/bundles/router.dev.js"
     ])
     .pipe(gulp.dest('dist/lib'))
 });

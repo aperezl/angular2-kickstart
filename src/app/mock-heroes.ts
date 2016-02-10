@@ -1,4 +1,5 @@
 import {Hero} from './hero';
+
 export var HEROES: Hero[] = [
     {"id": 11, "name": "Mr. Nice"},
     {"id": 12, "name": "Narco"},
@@ -11,4 +12,3 @@ export var HEROES: Hero[] = [
     {"id": 19, "name": "Magma"},
     {"id": 20, "name": "Tornado"}
 ];
-

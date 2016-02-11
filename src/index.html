@@ -3,10 +3,11 @@
   <head>
     <title>Angular 2 QuickStart</title>
     <base href="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="lib/ng2-material.css">
 
     <!-- 1. Load libraries -->
     <!-- IE required polyfills, in this exact order -->
@@ -18,6 +19,7 @@
     <script src="lib/Rx.js"></script>
     <script src="lib/angular2.dev.js"></script>
     <script src="lib/router.dev.js"></script>
+    <script src="lib/ng2-material.js"></script>
 
     <!-- 2. Configure SystemJS -->
     <script>
@@ -37,7 +39,9 @@
 
   <!-- 3. Display the application -->
   <body>
-    <my-app>Loading...</my-app>
+    <my-app layout="row" layout-align="center start">
+      Loading...
+    </my-app>
   </body>
 
 </html>

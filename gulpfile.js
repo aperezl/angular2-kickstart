@@ -27,9 +27,9 @@ gulp.task('copy:libs', function() {
       "node_modules/systemjs/dist/system.src.js",
       "node_modules/rxjs/bundles/Rx.js",
       "node_modules/angular2/bundles/angular2.dev.js",
-      "node_modules/material-design-lite/material.min.css",
-      "node_modules/material-design-lite/material.min.js",
-      "node_modules/angular2/bundles/router.dev.js"
+      "node_modules/angular2/bundles/router.dev.js",
+      "node_modules/ng2-material/dist/ng2-material.css",
+      "node_modules/ng2-material/dist/ng2-material.js"
     ])
     .pipe(gulp.dest('dist/lib'))
 });
@@ -47,9 +47,9 @@ gulp.task('live-serve', function() {
     .pipe(webserver({
       fallback: 'index.html',
       livereload: {
-        enable: true, // need this set to true to enable livereload 
+        enable: true, // need this set to true to enable livereload
         filter: function(fileName) {
-          if (fileName.match(/.map$/)) { // exclude all source maps from livereload 
+          if (fileName.match(/.map$/)) { // exclude all source maps from livereload
             return false;
           } else {
             return true;

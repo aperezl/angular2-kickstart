@@ -26,7 +26,7 @@ interface Hero {
 @Component({
     selector: 'my-heroes',
     templateUrl: 'app/heroes.component.html',
-    styleUrls:  ['app/heroes.component.css'],
+//    styleUrls:  ['app/heroes.component.css'],
     directives: [HeroDetailComponent],
     providers: []
 })

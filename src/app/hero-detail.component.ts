@@ -6,7 +6,7 @@ import {RouteParams} from 'angular2/router';
 @Component({
   selector: 'my-hero-detail',
   templateUrl: 'app/hero-detail.component.html',
-  styleUrls: ['app/hero-detail.component.css'],
+  //styleUrls: ['app/hero-detail.component.css'],
   inputs: ['hero'],
   providers: [HeroService]
 })

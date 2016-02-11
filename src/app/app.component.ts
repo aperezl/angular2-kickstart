@@ -36,8 +36,34 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
     <main class="mdl-layout__content">
     <div class="page-content">
       <!-- Your content goes here -->
-      <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+<!-- Left aligned menu below button -->
+<button id="demo-menu-lower-left"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">more_vert</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-left">
+  <li class="mdl-menu__item">Some Action</li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
+  <li disabled class="mdl-menu__item">Disabled Action</li>
+  <li class="mdl-menu__item">Yet Another Action</li>
+</ul>
+<!-- Right aligned menu below button -->
+<button id="demo-menu-lower-right"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">more_vert</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-right">
+  <li class="mdl-menu__item">Some Action</li>
+  <li class="mdl-menu__item">Another Action</li>
+  <li disabled class="mdl-menu__item">Disabled Action</li>
+  <li class="mdl-menu__item">Yet Another Action</li>
+</ul>
+      <div class="mdl-grid" style="background-color: #f0f0f0">
+        <div class="mdl-cell mdl-cell--12-col">
           <router-outlet></router-outlet>
         </div>
       </div>
@@ -70,5 +96,6 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 ])
 
 export class AppComponent {
-  title: 'Tour of Heroes2'
+  title =  "Tour of Heroes2";
 }
+

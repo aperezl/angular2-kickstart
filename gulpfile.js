@@ -4,6 +4,7 @@ var typescript = require('gulp-typescript');
 var sourcemaps = require('gulp-sourcemaps');
 var gls = require('gulp-live-server');
 var config = require('./tsconfig.json');
+var webserver = require('gulp-webserver');
 
 gulp.task('clean', function() {
   return del('dist/**/*');
@@ -42,12 +43,20 @@ gulp.task('copy:assets', function() {
 });
 
 gulp.task('live-serve', function() {
-  var server = gls.static('dist', 3000);
-  server.start();
-  gulp.watch('dist/**/*', function(file) {
-    server.notify.apply(server, [file]);
-  });
-  return;
+  gulp.src('dist')
+    .pipe(webserver({
+      fallback: 'index.html',
+      livereload: {
+        enable: true, // need this set to true to enable livereload 
+        filter: function(fileName) {
+          if (fileName.match(/.map$/)) { // exclude all source maps from livereload 
+            return false;
+          } else {
+            return true;
+          }
+        }
+      }
+    }));
 });
 
 gulp.watch('src/app/**/*.ts', ['compile']);

@@ -1,8 +1,160 @@
 <h3>Top Heroes</h3>
-<div class="grid grid-pad">
+
      <div *ngFor="#hero of heroes" (click)="gotoDetail(hero)" class="col-1-4" >
         <div class="module hero">
             <h4>{{hero.name}}</h4>
         </div>
     </div>
+
+
+<!-- Left aligned menu below button -->
+<button id="demo-menu-lower-left"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">more_vert</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-left">
+  <li class="mdl-menu__item">Some Action</li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
+  <li disabled class="mdl-menu__item">Disabled Action</li>
+  <li class="mdl-menu__item">Yet Another Action</li>
+</ul>
+<!-- Right aligned menu below button -->
+<button id="demo-menu-lower-right"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">more_vert</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-right">
+  <li class="mdl-menu__item">Some Action</li>
+  <li class="mdl-menu__item">Another Action</li>
+  <li disabled class="mdl-menu__item">Disabled Action</li>
+  <li class="mdl-menu__item">Yet Another Action</li>
+</ul>
+
+
+<!-- Textfield with Floating Label -->
+
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" id="sample3">
+    <label class="mdl-textfield__label" for="sample3">Text...</label>
+  </div>
+</form>
+
+
+<form action="#">
+
+
+<table class="mdl-data-table mdl-js-data-table">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Name</th>
+      <th class="mdl-data-table__cell--non-numeric">Nickname</th>
+      <th>Age</th>
+      <th class="mdl-data-table__cell--non-numeric">Living?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">John Lennon</td>
+      <td class="mdl-data-table__cell--non-numeric">The smart one</td>
+      <td>40</td>
+      <td class="mdl-data-table__cell--non-numeric">No</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+           <input class="mdl-textfield__input" type="text" id="sample3">
+           <label class="mdl-textfield__label" for="sample3">Text...</label>
+        </div>
+
+      </td>
+      <td class="mdl-data-table__cell--non-numeric">The cute one</td>
+      <td>73</td>
+      <td class="mdl-data-table__cell--non-numeric">Yes</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">George Harrison</td>
+      <td class="mdl-data-table__cell--non-numeric">The shy one</td>
+      <td>58</td>
+      <td class="mdl-data-table__cell--non-numeric">No</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Ringo Starr</td>
+      <td class="mdl-data-table__cell--non-numeric">The funny one</td>
+      <td>74</td>
+      <td class="mdl-data-table__cell--non-numeric">Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+</form>
+
+
+
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Material</th>
+      <th>Quantity</th>
+      <th>Unit price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+      <td>25</td>
+      <td>$2.90</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+      <td>50</td>
+      <td>$1.25</td>
+    </tr>
+    <tr>
+
+      <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+      <td>10</td>
+      <td>$2.35</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<div class="mdl-shadow--2dp" style="background: #ffffff; padding: 10px; min-height: 50px; margin-bottom: 8px">
+	<div style="float: left">
+		<img src="http://lorempixel.com/image_output/people-q-c-80-80-1.jpg" width="50" height="50" style="border-radius: 8px">
+	</div>
+	<div>
+		aaaa	
+	</div>
+</div>
+
+<div class="mdl-shadow--2dp" style="background: #ffffff; padding: 10px; min-height: 50px">
+	<div style="float: left">
+		<img src="http://lorempixel.com/image_output/people-q-c-80-80-1.jpg" width="50" height="50" style="border-radius: 8px">
+	</div>
+	<div>
+		aaaa	
+	</div>
+</div>
+<div class="mdl-shadow--2dp" style="background: #ffffff; padding: 10px; min-height: 50px">
+	<div style="float: left">
+		<img src="http://lorempixel.com/image_output/people-q-c-80-80-1.jpg" width="50" height="50" style="border-radius: 8px">
+	</div>
+	<div>
+		aaaa	
+	</div>
+</div>
+<div class="mdl-shadow--2dp" style="background: #ffffff; padding: 10px; min-height: 50px">
+	<div style="float: left">
+		<img src="http://lorempixel.com/image_output/people-q-c-80-80-1.jpg" width="50" height="50" style="border-radius: 8px">
+	</div>
+	<div>
+		aaaa	
+	</div>
 </div>

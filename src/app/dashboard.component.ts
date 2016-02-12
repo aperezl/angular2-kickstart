@@ -12,6 +12,7 @@ import { Router } from 'angular2/router';
 export class DashboardComponent implements OnInit {
 
   heroes: Hero[] = [];
+
   constructor(
     private _router: Router,
     private _heroService: HeroService
@@ -22,7 +23,9 @@ export class DashboardComponent implements OnInit {
     this
     ._heroService.getHeroes()
     .then(heroes => this.heroes = heroes.slice(1, 5));
+    componentHandler.upgradeAllRegistered();
   }
+
 
   gotoDetail(hero: Hero) {
     let link = ['HeroDetail', { id: hero.id }];

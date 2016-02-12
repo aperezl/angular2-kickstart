@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, Inject, ElementRef} from 'angular2/core';
 import {HeroService} from './hero.service';
 import {HeroesComponent} from './heroes.component';
 import {DashboardComponent} from './dashboard.component';
@@ -36,32 +36,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
     <main class="mdl-layout__content">
     <div class="page-content">
       <!-- Your content goes here -->
-<!-- Left aligned menu below button -->
-<button id="demo-menu-lower-left"
-        class="mdl-button mdl-js-button mdl-button--icon">
-  <i class="material-icons">more_vert</i>
-</button>
 
-<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-    for="demo-menu-lower-left">
-  <li class="mdl-menu__item">Some Action</li>
-  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
-  <li disabled class="mdl-menu__item">Disabled Action</li>
-  <li class="mdl-menu__item">Yet Another Action</li>
-</ul>
-<!-- Right aligned menu below button -->
-<button id="demo-menu-lower-right"
-        class="mdl-button mdl-js-button mdl-button--icon">
-  <i class="material-icons">more_vert</i>
-</button>
-
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-    for="demo-menu-lower-right">
-  <li class="mdl-menu__item">Some Action</li>
-  <li class="mdl-menu__item">Another Action</li>
-  <li disabled class="mdl-menu__item">Disabled Action</li>
-  <li class="mdl-menu__item">Yet Another Action</li>
-</ul>
       <div class="mdl-grid" style="background-color: #f0f0f0">
         <div class="mdl-cell mdl-cell--12-col">
           <router-outlet></router-outlet>
@@ -97,5 +72,14 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 
 export class AppComponent {
   title =  "Tour of Heroes2";
-}
+  protected _elementRef;
+  constructor(@Inject(ElementRef) elementRef: ElementRef) {
+    this._elementRef = elementRef;
+  }
 
+  onInit() {
+    // window.componentHandler.upgradeElement is provided by Material Design Lite
+    // and is necessary to call in order to "augment" dynamically added HTML
+    window.componentHandler.upgradeElement(this._elementRef.nativeElement.firstElementChild);
+  }
+}
